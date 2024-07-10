@@ -1,0 +1,65 @@
+
+  This is Terrain part of RegCM package version 5
+   GIT Revision: 5.0.0 compiled at: data : Jul  8 2024  time: 15:32:42
+
+ : this run start at  : 2024-07-11 10:01:54+1200
+ : it is submitted by : sha392
+ : it is running on   : wbg004
+ : in directory       : /scale_wlg_persistent/filesets/project/uc04166/Reg/RegCM-5.0.0/Run
+                      
+ Creating a set of sigma levels... 
+ Convergence reached.
+ #  0.92740257089299472        1.0016084179687503               17
+ #   5.0000000000000003E-002   1.0000000000000000E-002  0.99999031131634053     
+ 
+ Doing Horizontal Grid with following parameters
+ iy     =          297
+ jx     =          297
+ kz     =           64
+ ds     =    10.000000000000000     
+ clat   =   -79.000000000000000     
+ clon   =   -167.00000000000000     
+ iproj  = LAMCON
+ Grid setup done
+ Geo mapping done
+ Special case for longitude wrapping
+ Calculated large extrema:
+          MINLAT =   -90.000000000000000     
+          MAXLAT =   -34.000000000000000     
+          MINLON =   -180.00000000000000     
+          MAXLON =    180.00000000000000     
+ Determined Grid coordinate range
+ No resampling used.
+ Static DEM data successfully read in
+ Interpolated DEM on model GRID
+ Static landcover BATS data successfully read in
+ Interpolated landcover on model GRID
+ Static texture data successfully read in
+ Interpolated texture on model GRID
+
+  This is mksurfdata part of RegCM package version 5
+   GIT Revision: 5.0.0 compiled at: data : Jul  8 2024  time: 15:33:41
+
+ : this run start at  : 2024-07-11 10:02:13+1200
+ : it is submitted by : sha392
+ : it is running on   : wbg004
+ : in directory       : /scale_wlg_persistent/filesets/project/uc04166/Reg/RegCM-5.0.0/Run
+                      
+
+  This is sst part of the RegCM version 5
+   GIT Revision: 5.0.0 compiled at: data : Jul  8 2024  time: 15:33:03
+
+ : this run start at    : 2024-07-11 10:02:13+1200
+ : it is submitted by   : sha392
+ : it is running on     : wbg004
+ : in directory         : /scale_wlg_persistent/filesets/project/uc04166/Reg/RegCM-5.0.0/Run
+                       
+
+  This is icbc part of the RegCM version 5
+   GIT Revision: 5.0.0 compiled at: data : Jul  8 2024  time: 15:33:03
+
+ : this run start at    : 2024-07-11 10:02:13+1200
+ : it is submitted by   : sha392
+ : it is running on     : wbg004
+ : in directory         : /scale_wlg_persistent/filesets/project/uc04166/Reg/RegCM-5.0.0/Run
+                       

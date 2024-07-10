@@ -1,0 +1,105 @@
+! testing the lakemod: provided by Bi 
+ &dimparam
+ iy     = 297,
+ jx     = 297,
+ kz     = 64,
+ nsg    = 1,
+ /
+ &geoparam
+ iproj = 'LAMCON',
+ ds = 10.0,
+ ptop = 5.0,
+ clat = -79.00,
+ clon = -167.00,
+ plat = 45.39,
+ plon = 13.48,
+ truelatl = 35.0,
+ truelath = 60.0,
+ i_band = 0,
+ /
+ &terrainparam
+ domname = 'test1',
+ lakedpth = .true.,
+ fudge_lnd   = .false.,
+ fudge_lnd_s = .false.,
+ fudge_tex   = .false.,
+ fudge_tex_s = .false.,
+ dirter = '/nesi/project/uc04166/Reg/RegCM-5.0.0/Run/input',
+ inpter = '/nesi/project/uc04166/Reg/RegCM-5.0.0/Glob',
+ /
+ &debugparam
+ debug_level = 0,
+ /
+ &boundaryparam
+ nspgx  = 12,
+ nspgd  = 12,
+ /
+ &globdatparam
+ ibdyfrq = 6,
+ ssttyp = 'ERA5',
+ dattyp = 'ERA5',
+ gdate1 = 2014010100,
+ gdate2 = 2014020100,
+ dirglob = '/nesi/project/uc04166/Reg/RegCM-5.0.0/Run/input',
+ inpglob = '/nesi/project/uc04166/Reg/RegCM-5.0.0/Glob',
+ /
+ &restartparam
+ ifrest  = .false. ,
+ mdate0  = 2014010100,
+ mdate1  = 2014010100,
+ mdate2  = 2014010200,
+ /
+ &timeparam
+ dtrad   =    30.,
+ dtabem  =    18.,
+ dtsrf   =   600.,
+ dt      =   30.,
+ /
+ &outparam
+ ifsave  = .true. ,
+   savfrq  =    0.,
+ ifatm  = .true. ,
+   atmfrq  =     6.,
+ ifrad   = .true. ,
+   radfrq  =     6.,
+ ifsrf   = .true. ,
+ ifsub   = .true. ,
+ iflak   = .false.,
+   srffrq  =     3.,
+ ifchem  = .false.,
+   chemfrq =     6.,
+ dirout= '/nesi/project/uc04166/Reg/RegCM-5.0.0/Run/input'
+ /
+ &physicsparam
+ iboudy  =          5,
+ ibltyp  =          1,
+ icup_lnd =         4,
+ icup_ocn =         4,
+ ipptls  =          2,
+ iocnflx =          2,
+ ipgf    =          0,
+ iemiss  =          0,
+ lakemod =          1,
+ ichem   =          0,
+ idcsst = 1,
+ iseaice = 1,
+ idesseas = 0,
+ iconvlwp = 0,
+ /
+ &subexparam
+ /
+ &grellparam
+ /
+ &emanparam
+ /
+ &holtslagparam
+ /
+ &clm_inparm
+ fpftcon = 'pft-physiology.c130503.nc',
+ fsnowoptics = 'snicar_optics_5bnd_c090915.nc',
+ fsnowaging = 'snicar_drdt_bst_fit_60_c070416.nc',
+ /
+ &clm_soilhydrology_inparm
+ /
+ &clm_hydrology1_inparm
+ /

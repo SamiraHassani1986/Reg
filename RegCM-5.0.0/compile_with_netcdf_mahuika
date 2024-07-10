@@ -1,0 +1,2 @@
+./configure CC=gcc FC=gfortran CPPFLAGS="-I/opt/nesi/CS400_centos7_bdw/netCDF/4.9.2-gompi-2023a/include -I/opt/nesi/CS400_centos7_bdw/netCDF-Fortran/4.6.1-gompi-2023a/include" LDFLAGS="-L/opt/nesi/CS400_centos7_bdw/netCDF/4.9.2-gompi-2023a/lib/ -L/opt/nesi/CS400_centos7_bdw/netCDF/4.9.2-gompi-2023a/lib/libnetcdf.so.19  -L/opt/nesi/CS400_centos7_bdw/netCDF/4.9.2-gompi-2023a/lib/    -L/opt/nesi/CS400_centos7_bdw/netCDF-Fortran/4.6.1-gompi-2023a/lib/libnetcdf.so.19  -lnetcdff -lnetcdf -lm" --enable-clm45 
+
