@@ -1,0 +1,650 @@
+
+  This is RegCM 5
+   GIT Revision: 5.0.0 compiled at: data : Jul  8 2024  time: 16:39:11
+
+ : this run start at  : 2024-07-30 20:29:07+1200
+ : it is submitted by : sha392
+ : it is running on   : wbn128
+ : it is using        :          128   processors
+ : in directory       : /scale_wlg_persistent/filesets/project/uc04166/Reg/RegCM-5.0.0/Run
+                       
+ CPUS DIM1 =           16
+ CPUS DIM2 =            8
+
+ Reading model namelist file
+ Using default dynamical parameters.
+ Using default hydrostatc parameters.
+ Using default cloud parameter.
+ Using default MIT parameter.
+ Initial date of the global simulation:  2014-01-01 00:00:00 UTC        
+ Initial date of this run             :  2014-01-01 00:00:00 UTC        
+ Final date of this run               :  2014-01-02 00:00:00 UTC        
+ Total simulation lenght              :           24  hours
+ Timestep in seconds =   30.000000
+ Split explicit dtau =    7.500000  15.000000
+ Reading Domain file : /nesi/project/uc04166/Reg/RegCM-5.0.0/Run/input//FirstCase_DOMAIN000.nc
+ Setting IPCC scenario to RCP4.5  
+ Create SAV files :  T
+ Create ATM files :  T
+ Create RAD files :  F
+ Create SRF files :  T
+ Create STS files :  F
+ Create SHF files :  F
+ Monthly new files are created
+ Frequency in days to create SAV : 7200.0
+ Frequency in hours to create ATM :    6.0
+ Frequency in hours to create RAD :    6.0
+ Frequency in hours to create SRF :    6.0
+ Physical Parameterizations
+  Lateral Boundary conditions :  5
+  Semi-Lagrangian Advection   :  0
+  Land cumulus conv. scheme   :  4
+  Ocean cumulus conv. scheme  :  4
+  Moisture schem              :  2
+  Ocean Flux scheme           :  2
+  Zeng roughness formula      :  1
+  Zeng roughness method       :  1
+  Coupling with ocean         :  0
+  Coupling with wave          :  0
+  Coupling with COP           :  0
+  Pressure gradient force     :  0
+  Prescribed LW emissivity    :  0
+  Lake model in BATS          :  0
+  Simulate diurnal sst cycle  :  0
+  Simulate sea ice cover      :  1
+  Enable chem/aerosol model   :  0
+  Large scale LWP as convect. :  0
+  Cloud fraction scheme       :  0
+  Marine stratocumulus        :  0
+  Climate O3 dataset          :  0
+  Climate Aerosol dataset     :  0
+ Boundary Pameterizations
+  Num. of bndy points cross  : 12
+  Num. of bndy points dot    : 12
+  Nudge value high range     :  3.000000
+  Nudge value medium range   :  2.000000
+  Nudge value low range      :  1.000000
+  Nm paramter                : -1.000000
+  Dm paramter                : -1.000000
+ Model Timestep Pameterizations
+  time step for dynamical model in seconds :    30.000000
+  time step for surface   model in seconds :   600.000000
+  time step for cumulus   model in seconds :   300.000000
+  time step for radiation model in seconds :  1800.000000
+  time step for emission  model in seconds : 64800.000000
+ Nudging coefficients F1=    0.001667, F2=    0.000333
+  # Nudging coefficient profile #
+     2.95       2.85       2.74       2.63       2.52       2.41       2.30    
+     2.18       2.07       1.97       1.87       1.77       1.68       1.59    
+     1.52       1.44       1.38       1.32       1.27       1.22       1.18    
+     1.15       1.12       1.09       1.07       1.05       1.04       1.03    
+     1.03       1.02       1.01       1.01       1.00    
+ Domain grid parameters:
+  Map Projection        : POLSTR
+  Dot Grid Full Extent  :  297x 297x 32
+  Model Top Pressure    :    5.000000 cb
+  Model Grid Spacing    :   20.000000 km
+  Proj Center Latitude  :  -79.000000 deg
+  Proj Center longitude : -167.000000 deg
+ Fourth order / second order boundary diffusion
+ Holtslag PBL Scheme
+  ricr_ocn     =    0.250000
+  ricr_lnd     =    0.250000
+  zhnew_fac    =    0.250000
+  ifaholt      =  0
+  ifaholtth10  =  2
+  holtth10iter =    1
+ Cloud fraction schemes parameters
+  # of bottom no cloud model levels :  1
+  Maximum relative humidity         :    1.010000
+  Minimum relative humidity         :    0.010000
+  RH0 temperature threshold         :  238.000000
+  Relative humidity thresholds: Land =    0.800000 Ocean =    0.900000
+  Maximum total cloud cover for rad :    0.750000
+  Conv. CF UMF factor deep cumulus  :    0.140000
+  Conv. CF UMF factor deep cumulus  :    0.140000
+  Conv. CF UMF factor k2            :  500.000000
+  Surface radiation hack            :           F
+  Vavrus-Waliser Arctic cloud fix   :           T
+ Emanuel (1991) Convection Scheme V4.3C used.
+  Min Convection origin             :   1
+  Autoconversion Threshold (ocean)  :    0.001100
+  Autoconversion Threshold (land)   :    0.001100
+  Autoconversion Threshold to zero  :  -55.000000
+  Entrainment Coefficient           :    1.500000
+  Fractional area of uns. downdraft :    0.050000
+  Fractional area of uns. downdraft :    0.050000
+  Fall speed of rain                :   50.000000
+  Fall speed of snow                :    5.500000
+  Rain evaporation coefficient      :    1.000000
+  Snow evaporation coefficient      :    0.800000
+  Convective momentum transport coef:    0.700000
+  Downdraft velocity scale          :   10.000000
+  Max negative perturbation blw LFC :    0.900000
+  Quasi-equilibrium approach rate 1 :    0.010000
+  Quasi-equilibrium approach rate 2 :    0.100000
+  Precipitation efficienct (land)   :    0.999000
+  Precipitation efficienct (ocean)  :    0.999000
+ Convective Cloud Cover parameters after resolution scaling
+  Maximum Convective Cloud Cover :    0.645062
+  Convective Cloud Water         :    0.000300
+ The surface energy budget is used to calculate the ground temperature.
+ The radiation is computed every   30. minutes.
+ Relaxation boundary conditions (exponential method)
+# k       sigma           a      dsigma       twt(1)       twt(2)         qcon
+  1      0.0000      0.0250      0.0500       0.0000       0.0000       0.0000
+  2      0.0500      0.0761      0.0522       0.4890       0.5110       0.5110
+  3      0.1022      0.1293      0.0540       0.4915       0.5085       0.5085
+  4      0.1563      0.1840      0.0554       0.4940       0.5060       0.5060
+  5      0.2117      0.2397      0.0562       0.4964       0.5036       0.5036
+  6      0.2678      0.2960      0.0564       0.4989       0.5011       0.5011
+  7      0.3242      0.3523      0.0561       0.5013       0.4987       0.4987
+  8      0.3803      0.4080      0.0553       0.5038       0.4962       0.4962
+  9      0.4356      0.4626      0.0539       0.5063       0.4937       0.4937
+ 10      0.4895      0.5155      0.0520       0.5087       0.4913       0.4913
+ 11      0.5416      0.5664      0.0498       0.5112       0.4888       0.4888
+ 12      0.5913      0.6149      0.0471       0.5136       0.4864       0.4864
+ 13      0.6384      0.6605      0.0442       0.5161       0.4839       0.4839
+ 14      0.6826      0.7031      0.0410       0.5186       0.4814       0.4814
+ 15      0.7236      0.7425      0.0377       0.5210       0.4790       0.4790
+ 16      0.7613      0.7785      0.0343       0.5235       0.4765       0.4765
+ 17      0.7957      0.8111      0.0309       0.5259       0.4741       0.4741
+ 18      0.8266      0.8404      0.0276       0.5284       0.4716       0.4716
+ 19      0.8542      0.8664      0.0244       0.5308       0.4692       0.4692
+ 20      0.8786      0.8893      0.0214       0.5333       0.4667       0.4667
+ 21      0.9000      0.9092      0.0185       0.5357       0.4643       0.4643
+ 22      0.9185      0.9264      0.0159       0.5382       0.4618       0.4618
+ 23      0.9344      0.9411      0.0135       0.5406       0.4594       0.4594
+ 24      0.9479      0.9536      0.0114       0.5431       0.4569       0.4569
+ 25      0.9592      0.9640      0.0095       0.5455       0.4545       0.4545
+ 26      0.9687      0.9726      0.0078       0.5480       0.4520       0.4520
+ 27      0.9765      0.9797      0.0064       0.5504       0.4496       0.4496
+ 28      0.9829      0.9854      0.0052       0.5528       0.4472       0.4472
+ 29      0.9880      0.9901      0.0041       0.5553       0.4447       0.4447
+ 30      0.9921      0.9938      0.0033       0.5577       0.4423       0.4423
+ 31      0.9954      0.9967      0.0026       0.5601       0.4399       0.4399
+ 32      0.9980      0.9990      0.0020       0.5621       0.4379       0.4379
+ 33      1.0000
+ READY IC DATA for  2014-01-01 00:00:00 UTC        
+ SEARCH BC data for 2014010106 , step =        0
+ READY  BC from     2014010100  to 2014010106 
+ Updating orbit parameters at  2014-01-01 00:00:00 UTC        
+ At  2014-01-01 00:00:00 UTC        
+ JDay      0.00000 solar declination angle = -23.10001980 degrees
+                   solar TSI irradiance    =    1360.9872 W/m^2
+ CLM version: 4.5 - RegCM 5.0.0
+ Attempting to initialize the land model .....
+ Mask given by RegCM model has a total of        32390  land points
+ Attempting to initialize run control settings .....
+ Read in clm_inparm namelist from: regcm.in
+ Read in clm_hydrology1_inparm namelist
+ Read in clm_soilhydrology_inparm namelist
+ Successfully initialized run control settings
+
+ define run:
+    source                = Community Land Model CLM4.5
+    model_version         = 5.0.0
+    run type              = initial
+    case title            = RegCM driven CLM4.5
+    username              = sha392
+    hostname              = wbn128
+ input data files:
+    PFT physiology = /nesi/project/uc04166/Reg/RegCM-5.0.0/Glob//CLM45/pftdata/pft-physiology.c130503.nc
+    surface data   = /nesi/project/uc04166/Reg/RegCM-5.0.0/Run/input//FirstCase_CLM45_surface.nc
+    land frac data = /nesi/project/uc04166/Reg/RegCM-5.0.0/Run/input//FirstCase_DOMAIN000.nc
+    enable_megan_emission                                 :  F
+    enable_urban_landunit                                 :  T
+    enable_more_crop_pft                                  :  F
+    SNICAR optical = /nesi/project/uc04166/Reg/RegCM-5.0.0/Glob//CLM45/snicardata/snicar_optics_5bnd_c090915.nc
+    SNICAR aging = /nesi/project/uc04166/Reg/RegCM-5.0.0/Glob//CLM45/snicardata/snicar_drdt_bst_fit_60_c070416.nc
+    initial data is from RegCM atm model
+    atmospheric forcing data is from RegCM atm model
+ Large file support for output files is ON
+ model physics parameters:
+    flag for random perturbation test is not set
+    CO2 volume mixing ratio   (umol/mol)   =    355.00000000000000     
+    land albedos  (unitless 0-1)   =   0.80000000000000004     
+    ice albedos   (unitless 0-1)   =   0.55000000000000004     
+    urban air conditioning/heating and wasteheat   = OFF             
+    urban traffic flux   =  F
+    more vertical layers =  F
+    maxpatch_pft         =           17
+    allocate_all_vegpfts =  T
+    perchroot (PWS based on unfrozen layers only) =  F
+    perchroot (PWS based on time-integrated active layer only) =  F
+
+ Lake Model Namelists:
+ Hostetler eddy increase low    :    25.000000000000000     
+ Hostetler eddy increase factor :    10.000000000000000     
+ Albedo melting lakes (visible) :  0.10000000000000001     
+ Albedo melting lakes (NIR)     :  0.10000000000000001     
+ Attempting to read ldomain from /nesi/project/uc04166/Reg/RegCM-5.0.0/Run/input//FirstCase_DOMAIN000.nc
+   domain_check set       = domain_set
+   domain_check decomped  =  T
+   domain_check ns        =        86436
+   domain_check ni,nj     =          294         294
+   domain_check clmlevel  = gridcell
+   domain_check nbeg,nend =            1         253
+   domain_check lonc      =   -15.878587007589715        60.837768470990653     
+   domain_check latc      =   -74.802460412858650       -67.400449505123433     
+   domain_check mask      =            1           1
+   domain_check frac      =    100.00000000000000        100.00000000000000     
+   domain_check topo      =    31.767691028284560        3478.0904785045332     
+   domain_check area      =    376.76535914082888        393.32673389068293     
+   domain_check pftm      =            1           1
+  
+  Reading in urban input data from surface data file ...
+  UrbanInput : /nesi/project/uc04166/Reg/RegCM-5.0.0/Run/input//FirstCase_CLM45_surface.nc
+  Sucessfully read urban input data
+
+ Attempting to read PFT physiological data .....
+ Successfully read PFT physiological data
+ Attempting to read surface boundary data .....
+ Checked LAT/LON compliance
+ Successfully read surface boundary data
+
+  Surface Grid Characteristics
+    total number of gridcells =        32390
+    total number of landunits =        41461
+    total number of columns   =        47002
+    total number of pfts      =       124576
+  
+ ---clm_ptrs_check:
+    clm_ptrs_check: g index ranges - OK
+    clm_ptrs_check: l index ranges - OK
+    clm_ptrs_check: c index ranges - OK
+    clm_ptrs_check: p index ranges - OK
+    clm_ptrs_check: g mono increasing - OK
+    clm_ptrs_check: l mono increasing - OK
+    clm_ptrs_check: c mono increasing - OK
+    clm_ptrs_check: p mono increasing - OK
+    clm_ptrs_check: tree consistent - OK
+  
+ Attempting to initialize time invariant variables
+ Attempting to read soil color, sand and clay boundary data .....
+ WARNING:: ETALAKE not found on surface data set.
+ All lake columns will have eta set equal to default value
+ WARNING:: LAKEFETCH not found on surface data set.
+ All lake columns will have fetch set equal to default value
+ Successfully read fmax, soil color, sand and clay boundary data
+
+ Attempting to read organic matter data .....
+  organicrd : /nesi/project/uc04166/Reg/RegCM-5.0.0/Run/input//FirstCase_CLM45_surface.nc
+ Successfully read organic matter data
+
+  # zsoi #
+    0.710E-02  0.279E-01  0.623E-01  0.119      0.212      0.366      0.620    
+     1.04       1.73       2.86       4.74       7.83       12.9       21.3    
+     21.3       35.2    
+  # zisoi #
+     0.00      0.175E-01  0.451E-01  0.906E-01  0.166      0.289      0.493    
+    0.829       1.38       2.30       3.80       6.28       10.4       17.1    
+     17.1       28.3       42.1    
+  # dzsoi #
+    0.175E-01  0.276E-01  0.455E-01  0.750E-01  0.124      0.204      0.336    
+    0.554      0.913       1.51       2.48       4.09       6.75       11.1    
+     11.1       13.9    
+ dzsoi_decomp   1.0000000000000000     
+ Set   249 100% special land-units points to zero slope
+ Set   245 100% special land-units points to zero slope
+ Set   244 100% special land-units points to zero slope
+ Set   244 100% special land-units points to zero slope
+ Set   241 100% special land-units points to zero slope
+ Set   241 100% special land-units points to zero slope
+ Set   244 100% special land-units points to zero slope
+ Set   242 100% special land-units points to zero slope
+ Attempting to read snow optical properties .....
+ Set   240 100% special land-units points to zero slope
+ Set   239 100% special land-units points to zero slope
+ Set   237 100% special land-units points to zero slope
+ Set   234 100% special land-units points to zero slope
+ Set   236 100% special land-units points to zero slope
+ Set   234 100% special land-units points to zero slope
+ Set   235 100% special land-units points to zero slope
+ Set   235 100% special land-units points to zero slope
+ Set   235 100% special land-units points to zero slope
+ Set   234 100% special land-units points to zero slope
+ Set   232 100% special land-units points to zero slope
+ Set   230 100% special land-units points to zero slope
+ Set   228 100% special land-units points to zero slope
+ Set   228 100% special land-units points to zero slope
+ Set   225 100% special land-units points to zero slope
+ Set   221 100% special land-units points to zero slope
+ Set   220 100% special land-units points to zero slope
+ Set   217 100% special land-units points to zero slope
+ Set   216 100% special land-units points to zero slope
+ Set   215 100% special land-units points to zero slope
+ Set   213 100% special land-units points to zero slope
+ Set   249 100% special land-units points to zero slope
+ Set   248 100% special land-units points to zero slope
+ Set   246 100% special land-units points to zero slope
+ Set   247 100% special land-units points to zero slope
+ Set   246 100% special land-units points to zero slope
+ Set   247 100% special land-units points to zero slope
+ Set   248 100% special land-units points to zero slope
+ Set   245 100% special land-units points to zero slope
+ Set   245 100% special land-units points to zero slope
+ Set   244 100% special land-units points to zero slope
+ Set   241 100% special land-units points to zero slope
+ Set   242 100% special land-units points to zero slope
+ Set   240 100% special land-units points to zero slope
+ Set   238 100% special land-units points to zero slope
+ Set   235 100% special land-units points to zero slope
+ Set   235 100% special land-units points to zero slope
+ Set   235 100% special land-units points to zero slope
+ Set   232 100% special land-units points to zero slope
+ Set   227 100% special land-units points to zero slope
+ Set   225 100% special land-units points to zero slope
+ Set   219 100% special land-units points to zero slope
+ Set   214 100% special land-units points to zero slope
+ Set   207 100% special land-units points to zero slope
+ Set   208 100% special land-units points to zero slope
+ Set   206 100% special land-units points to zero slope
+ Set   205 100% special land-units points to zero slope
+ Set   206 100% special land-units points to zero slope
+ Set   200 100% special land-units points to zero slope
+ Set   198 100% special land-units points to zero slope
+ Set   235 100% special land-units points to zero slope
+ Set   236 100% special land-units points to zero slope
+ Set   235 100% special land-units points to zero slope
+ Set   233 100% special land-units points to zero slope
+ Set   224 100% special land-units points to zero slope
+ Set   218 100% special land-units points to zero slope
+ Set   219 100% special land-units points to zero slope
+ Set   216 100% special land-units points to zero slope
+ Set   209 100% special land-units points to zero slope
+ Set   204 100% special land-units points to zero slope
+ Set   204 100% special land-units points to zero slope
+ Set   203 100% special land-units points to zero slope
+ Set   202 100% special land-units points to zero slope
+ Set   204 100% special land-units points to zero slope
+ Set   197 100% special land-units points to zero slope
+ Set   198 100% special land-units points to zero slope
+ Set   196 100% special land-units points to zero slope
+ Set   196 100% special land-units points to zero slope
+ Set   192 100% special land-units points to zero slope
+ Set   193 100% special land-units points to zero slope
+ Set   192 100% special land-units points to zero slope
+ Set   192 100% special land-units points to zero slope
+ Set   189 100% special land-units points to zero slope
+ Set   186 100% special land-units points to zero slope
+ SnowOptics_init : /nesi/project/uc04166/Reg/RegCM-5.0.0/Glob//CLM45/snicardata/snicar_optics_5bnd_c090915.nc
+ Set   178 100% special land-units points to zero slope
+ Set   213 100% special land-units points to zero slope
+ Set   210 100% special land-units points to zero slope
+ Set   199 100% special land-units points to zero slope
+ Set   196 100% special land-units points to zero slope
+ Set   192 100% special land-units points to zero slope
+ Set   195 100% special land-units points to zero slope
+ Set   190 100% special land-units points to zero slope
+ Set   190 100% special land-units points to zero slope
+ Set   191 100% special land-units points to zero slope
+ Set   186 100% special land-units points to zero slope
+ Set   187 100% special land-units points to zero slope
+ Set   187 100% special land-units points to zero slope
+ Set   187 100% special land-units points to zero slope
+ Set   183 100% special land-units points to zero slope
+ Set   183 100% special land-units points to zero slope
+ Set   183 100% special land-units points to zero slope
+ Set   176 100% special land-units points to zero slope
+ Set   174 100% special land-units points to zero slope
+ Set   163 100% special land-units points to zero slope
+ Set   158 100% special land-units points to zero slope
+ Set   157 100% special land-units points to zero slope
+ Set   156 100% special land-units points to zero slope
+ Successfully read snow optical properties
+ Attempting to read snow aging parameters .....
+ Set   211 100% special land-units points to zero slope
+ Set   206 100% special land-units points to zero slope
+ Set   198 100% special land-units points to zero slope
+ Set   189 100% special land-units points to zero slope
+ Set   187 100% special land-units points to zero slope
+ Set   185 100% special land-units points to zero slope
+ Set   183 100% special land-units points to zero slope
+ Set   192 100% special land-units points to zero slope
+ Set   190 100% special land-units points to zero slope
+ Set   191 100% special land-units points to zero slope
+ Set   189 100% special land-units points to zero slope
+ Set   188 100% special land-units points to zero slope
+ Set   188 100% special land-units points to zero slope
+ Set   185 100% special land-units points to zero slope
+ Set   182 100% special land-units points to zero slope
+ Set   181 100% special land-units points to zero slope
+ Set   182 100% special land-units points to zero slope
+ Set   181 100% special land-units points to zero slope
+ Set   182 100% special land-units points to zero slope
+ Set   181 100% special land-units points to zero slope
+ Successfully read snow aging properties
+ Successfully initialized time invariant variables
+ CLM_hist_printflds : number of master fields =          241
+ Setting initial data to non-spun up values
+ Attempting to initialize time invariant variables for lakes
+ CLM timestep appears to differ from 1800s. 
+ Adjusting minimum snow layer thickness over lakes to maintain stability.
+ New minimum thickness is    2.3094010767585028E-002 .
+ Successfully initialized time invariant variables for lakes
+ Setting initial data to non-spun up values for lake points
+ Initializing clm2 history files
+ Set   148 100% special land-units points to zero slope
+ Set   146 100% special land-units points to zero slope
+ Set   145 100% special land-units points to zero slope
+ There will be a total of            1  history tapes
+ History tape            1  write frequency is MONTHLY
+ All fields on history tape            1  are grid averaged
+ Output precision on history tape            1 =           2
+ hist tape =            1  written with dov2xy=  T
+ Successfully initialized clm2 history files
+ Successfully initialized the land model
+ begin initial run at:  2014-01-01 00:00:00 UTC
+ Attempting to read monthly vegetation data .....
+ At  2014-01-01 00:00:00 UTC
+ Month =            1  Day =            1
+ Reading months :           12           1
+ Successfully read monthly vegetation data for
+ month            1
+ Constant hor. diff. coef. =  0.200000E+05 m^2 s-1
+ Maximum  hor. diff. coef. =  0.208333E+06 m^2 s-1
+ Computed background diff. coeff. =  0.163979E+02 - 0.200000E+05 m^2 s-1
+ Calculating Vertical Modes
+ Linearization about standard atmosphere
+  # sigma    #
+     0.00      0.500E-01  0.102      0.156      0.212      0.268      0.324    
+    0.380      0.436      0.490      0.542      0.591      0.638      0.683    
+    0.724      0.761      0.796      0.827      0.854      0.879      0.900    
+    0.918      0.934      0.948      0.959      0.969      0.976      0.983    
+    0.983      0.988      0.992      0.995      0.998       1.00    
+  # t mean   #
+     218.       218.       218.       218.       226.       234.       240.    
+     246.       252.       256.       260.       264.       268.       271.    
+     273.       275.       278.       279.       281.       282.       283.    
+     284.       285.       286.       286.       287.       287.       287.    
+     287.       288.       288.       288.       288.    
+  # ps mean  #
+     101.    
+ Vertical mode problem for kz   =  32
+ Number of errors (should be 0) =   0
+ Split :    1 => aam :     4.0000, fac :     6.6667
+ Split :    2 => aam :     2.0000, fac :    12.0000
+ Opening new output file /nesi/project/uc04166/Reg/RegCM-5.0.0/Run/output//FirstCase_ATM.2014010100.nc
+ Opening new output file /nesi/project/uc04166/Reg/RegCM-5.0.0/Run/output//FirstCase_SRF.2014010100.nc
+ ATM variables written at  2014-01-01 00:00:00 UTC        
+  # Ozone profile at (3,3) #
+    0.502E-05  0.199E-05  0.107E-05  0.618E-06  0.371E-06  0.234E-06  0.171E-06
+    0.133E-06  0.109E-06  0.932E-07  0.820E-07  0.734E-07  0.674E-07  0.630E-07
+    0.598E-07  0.572E-07  0.555E-07  0.539E-07  0.526E-07  0.519E-07  0.514E-07
+    0.509E-07  0.504E-07  0.501E-07  0.498E-07  0.496E-07  0.496E-07  0.496E-07
+    0.496E-07  0.496E-07  0.496E-07  0.496E-07  0.496E-07  0.496E-07
+ ********************* MASS CHECK ********************
+ At  2014-01-01 02:00:00 UTC
+ Total dry air   = 0.30523E+18 kg, error =  -0.00009 %
+ Total water     = 0.26335E+15 kg, error =  -0.00082 %
+ Mean values over past 24 hours :
+ Dry air boundary    =  0.20366E+14 kg.
+ Water boundary      =  0.10178E+12 kg.
+ Convective rain     =  0.69792E+08 kg.
+ Nonconvective rain  =  0.30087E+10 kg.
+ Ground Evaporation  =  0.16806E+10 kg.
+ *****************************************************
+ $$$  2014-01-01 03:00:00 UTC        
+ $$$ 1st, 2nd time deriv of ps   =  0.98174E-03 0.24889E-05
+ $$$ no. of points with active convection =    9657
+ ********************* MASS CHECK ********************
+ At  2014-01-01 04:00:00 UTC
+ Total dry air   = 0.30789E+18 kg, error =   0.00060 %
+ Total water     = 0.26058E+15 kg, error =  -0.00074 %
+ Mean values over past 24 hours :
+ Dry air boundary    = -0.25211E+13 kg.
+ Water boundary      =  0.12662E+12 kg.
+ Convective rain     =  0.23311E+09 kg.
+ Nonconvective rain  =  0.66467E+10 kg.
+ Ground Evaporation  =  0.36154E+10 kg.
+ *****************************************************
+ $$$  2014-01-01 06:00:00 UTC        
+ $$$ 1st, 2nd time deriv of ps   =  0.58787E-03 0.11903E-05
+ $$$ no. of points with active convection =   10078
+ ATM variables written at  2014-01-01 06:00:00 UTC        
+ SRF variables written at  2014-01-01 06:00:00 UTC        
+ SEARCH BC data for 2014010112 , step =      720
+ READY  BC from     2014010106  to 2014010112 
+ ********************* MASS CHECK ********************
+ At  2014-01-01 06:00:00 UTC
+ Total dry air   = 0.30689E+18 kg, error =  -0.00022 %
+ Total water     = 0.25585E+15 kg, error =  -0.00127 %
+ Mean values over past 24 hours :
+ Dry air boundary    = -0.62138E+14 kg.
+ Water boundary      =  0.94340E+11 kg.
+ Convective rain     =  0.37029E+09 kg.
+ Nonconvective rain  =  0.99768E+10 kg.
+ Ground Evaporation  =  0.54077E+10 kg.
+ *****************************************************
+ ********************* MASS CHECK ********************
+ At  2014-01-01 08:00:00 UTC
+ Total dry air   = 0.30645E+18 kg, error =  -0.00010 %
+ Total water     = 0.25354E+15 kg, error =  -0.00063 %
+ Mean values over past 24 hours :
+ Dry air boundary    = -0.15580E+15 kg.
+ Water boundary      =  0.25200E+11 kg.
+ Convective rain     =  0.49082E+09 kg.
+ Nonconvective rain  =  0.12059E+11 kg.
+ Ground Evaporation  =  0.68370E+10 kg.
+ *****************************************************
+ $$$  2014-01-01 09:00:00 UTC        
+ $$$ 1st, 2nd time deriv of ps   =  0.41240E-03 0.73759E-06
+ $$$ no. of points with active convection =    9453
+ ********************* MASS CHECK ********************
+ At  2014-01-01 10:00:00 UTC
+ Total dry air   = 0.30765E+18 kg, error =   0.00027 %
+ Total water     = 0.25382E+15 kg, error =   0.00008 %
+ Mean values over past 24 hours :
+ Dry air boundary    = -0.28096E+15 kg.
+ Water boundary      = -0.70286E+11 kg.
+ Convective rain     =  0.61235E+09 kg.
+ Nonconvective rain  =  0.12652E+11 kg.
+ Ground Evaporation  =  0.79643E+10 kg.
+ *****************************************************
+ $$$  2014-01-01 12:00:00 UTC        
+ $$$ 1st, 2nd time deriv of ps   =  0.31339E-03 0.45756E-06
+ $$$ no. of points with active convection =   10195
+ ATM variables written at  2014-01-01 12:00:00 UTC        
+ SRF variables written at  2014-01-01 12:00:00 UTC        
+ SEARCH BC data for 2014010118 , step =     1440
+ READY  BC from     2014010112  to 2014010118 
+ ********************* MASS CHECK ********************
+ At  2014-01-01 12:00:00 UTC
+ Total dry air   = 0.30808E+18 kg, error =   0.00010 %
+ Total water     = 0.25419E+15 kg, error =   0.00010 %
+ Mean values over past 24 hours :
+ Dry air boundary    = -0.43278E+15 kg.
+ Water boundary      = -0.19493E+12 kg.
+ Convective rain     =  0.71662E+09 kg.
+ Nonconvective rain  =  0.13216E+11 kg.
+ Ground Evaporation  =  0.88286E+10 kg.
+ *****************************************************
+ ********************* MASS CHECK ********************
+ At  2014-01-01 14:00:00 UTC
+ Total dry air   = 0.30763E+18 kg, error =  -0.00010 %
+ Total water     = 0.25390E+15 kg, error =  -0.00008 %
+ Mean values over past 24 hours :
+ Dry air boundary    = -0.58086E+15 kg.
+ Water boundary      = -0.32391E+12 kg.
+ Convective rain     =  0.83034E+09 kg.
+ Nonconvective rain  =  0.14017E+11 kg.
+ Ground Evaporation  =  0.95385E+10 kg.
+ *****************************************************
+ $$$  2014-01-01 15:00:00 UTC        
+ $$$ 1st, 2nd time deriv of ps   =  0.22455E-03 0.30224E-06
+ $$$ no. of points with active convection =   11123
+ ********************* MASS CHECK ********************
+ At  2014-01-01 16:00:00 UTC
+ Total dry air   = 0.30769E+18 kg, error =   0.00001 %
+ Total water     = 0.25372E+15 kg, error =  -0.00005 %
+ Mean values over past 24 hours :
+ Dry air boundary    = -0.70191E+15 kg.
+ Water boundary      = -0.42359E+12 kg.
+ Convective rain     =  0.90003E+09 kg.
+ Nonconvective rain  =  0.15237E+11 kg.
+ Ground Evaporation  =  0.10107E+11 kg.
+ *****************************************************
+ $$$  2014-01-01 18:00:00 UTC        
+ $$$ 1st, 2nd time deriv of ps   =  0.13367E-03 0.22095E-06
+ $$$ no. of points with active convection =    8115
+ ATM variables written at  2014-01-01 18:00:00 UTC        
+ SRF variables written at  2014-01-01 18:00:00 UTC        
+ SEARCH BC data for 2014010200 , step =     2160
+ READY  BC from     2014010118  to 2014010200 
+ ********************* MASS CHECK ********************
+ At  2014-01-01 18:00:00 UTC
+ Total dry air   = 0.30807E+18 kg, error =   0.00009 %
+ Total water     = 0.25486E+15 kg, error =   0.00031 %
+ Mean values over past 24 hours :
+ Dry air boundary    = -0.80007E+15 kg.
+ Water boundary      = -0.48686E+12 kg.
+ Convective rain     =  0.91421E+09 kg.
+ Nonconvective rain  =  0.15672E+11 kg.
+ Ground Evaporation  =  0.10462E+11 kg.
+ *****************************************************
+ ********************* MASS CHECK ********************
+ At  2014-01-01 20:00:00 UTC
+ Total dry air   = 0.30758E+18 kg, error =  -0.00011 %
+ Total water     = 0.25422E+15 kg, error =  -0.00017 %
+ Mean values over past 24 hours :
+ Dry air boundary    = -0.85944E+15 kg.
+ Water boundary      = -0.50875E+12 kg.
+ Convective rain     =  0.89890E+09 kg.
+ Nonconvective rain  =  0.16143E+11 kg.
+ Ground Evaporation  =  0.10714E+11 kg.
+ *****************************************************
+ $$$  2014-01-01 21:00:00 UTC        
+ $$$ 1st, 2nd time deriv of ps   =  0.10412E-03 0.15184E-06
+ $$$ no. of points with active convection =    8279
+ ********************* MASS CHECK ********************
+ At  2014-01-01 22:00:00 UTC
+ Total dry air   = 0.30725E+18 kg, error =  -0.00007 %
+ Total water     = 0.25322E+15 kg, error =  -0.00027 %
+ Mean values over past 24 hours :
+ Dry air boundary    = -0.86833E+15 kg.
+ Water boundary      = -0.48325E+12 kg.
+ Convective rain     =  0.86185E+09 kg.
+ Nonconvective rain  =  0.16475E+11 kg.
+ Ground Evaporation  =  0.10927E+11 kg.
+ *****************************************************
+ Write restart file for CLM at  2014-01-02 00:00:00 UTC        
+ history tape            1 : no open file to close
+ Writing restart dataset on /nesi/project/uc04166/Reg/RegCM-5.0.0/Run/output/FirstCase.clm.regcm.r.2014010200.nc
+ Writing restart dataset on /nesi/project/uc04166/Reg/RegCM-5.0.0/Run/output//FirstCase.clm.regcm.rh0.2014010200.nc
+ Successfully wrote out restart data for CLM 4.5
+ At  2014-01-02 00:00:00 UTC        
+ JDay      1.00000 solar declination angle = -23.02373530 degrees
+                   solar TSI irradiance    =    1360.9869 W/m^2
+ $$$  2014-01-02 00:00:00 UTC        
+ $$$ 1st, 2nd time deriv of ps   =  0.82532E-04 0.10277E-06
+ $$$ no. of points with active convection =    9260
+ ATM variables written at  2014-01-02 00:00:00 UTC        
+ SRF variables written at  2014-01-02 00:00:00 UTC        
+ SAV variables written at  2014-01-02 00:00:00 UTC        
+ Final time  2014-01-02 00:00:00 UTC reached.
+ Elapsed seconds of run for this month :    331.222351    
+ : this run stops at  : 2024-07-30 20:34:41+1200
+ : Run has been completed using          128  processors.
+ : Total elapsed seconds of run :    331.23962096012878     
+ RegCM V5 simulation successfully reached end

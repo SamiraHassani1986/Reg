@@ -1,0 +1,39 @@
+
+  This is Terrain part of RegCM package version 5
+   GIT Revision: 5.0.0 compiled at: data : Jul  8 2024  time: 15:32:42
+
+ : this run start at  : 2024-07-30 11:20:43+1200
+ : it is submitted by : sha392
+ : it is running on   : wbn021
+ : in directory       : /scale_wlg_persistent/filesets/project/uc04166/Reg/RegCM-5.0.0/Run
+                      
+
+  This is mksurfdata part of RegCM package version 5
+   GIT Revision: 5.0.0 compiled at: data : Jul  8 2024  time: 15:33:41
+
+ : this run start at  : 2024-07-30 11:20:43+1200
+ : it is submitted by : sha392
+ : it is running on   : wbn021
+ : in directory       : /scale_wlg_persistent/filesets/project/uc04166/Reg/RegCM-5.0.0/Run
+                      
+
+  This is sst part of the RegCM version 5
+   GIT Revision: 5.0.0 compiled at: data : Jul  8 2024  time: 15:33:03
+
+ : this run start at    : 2024-07-30 11:20:43+1200
+ : it is submitted by   : sha392
+ : it is running on     : wbn021
+ : in directory         : /scale_wlg_persistent/filesets/project/uc04166/Reg/RegCM-5.0.0/Run
+                       
+
+  This is icbc part of the RegCM version 5
+   GIT Revision: 5.0.0 compiled at: data : Jul  8 2024  time: 15:33:03
+
+ : this run start at    : 2024-07-30 11:20:43+1200
+ : it is submitted by   : sha392
+ : it is running on     : wbn021
+ : in directory         : /scale_wlg_persistent/filesets/project/uc04166/Reg/RegCM-5.0.0/Run
+                       
+ Using non hydrostatic parameters
+ base_state_pressure    =  101325.00
+ logp_lrate             =      47.70

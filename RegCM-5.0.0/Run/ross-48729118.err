@@ -1,0 +1,45 @@
+
+The following have been reloaded with a version change:
+  1) GCCcore/12.3.0 => GCCcore/9.2.0
+  2) binutils/2.40-GCCcore-12.3.0 => binutils/2.32-GCCcore-9.2.0
+  3) zlib/1.2.13-GCCcore-12.3.0 => zlib/1.2.11-GCCcore-9.2.0
+
+
+The following have been reloaded with a version change:
+  1) GCCcore/9.2.0 => GCCcore/12.3.0
+  2) HDF5/1.10.5-iimpi-2020a => HDF5/1.14.3-gompi-2023a
+  3) Szip/2.1.1-GCCcore-9.2.0 => Szip/2.1.1-GCCcore-12.3.0
+  4) cURL/7.64.0-GCCcore-9.2.0 => cURL/8.3.0-GCCcore-12.3.0
+  5) netCDF/4.7.3-iimpi-2020a => netCDF/4.9.2-gompi-2023a
+  6) zlib/1.2.11-GCCcore-9.2.0 => zlib/1.2.13-GCCcore-12.3.0
+
+STOP  Execution terminated because of runtime error
+ Error reading terrainparam namelist in regcm.in
+ Parameter initialization not completed
+ Usage : 
+           ./bin/terrainCLM45 regcm.in
+  
+ Check argument and namelist syntax
+ terrain
+STOP  Execution terminated because of runtime error
+ Error reading terrainparam namelist in regcm.in
+ Parameter initialization not completed
+ Usage : 
+           ./bin/mksurfdataCLM45 regcm.in
+  
+ mksurfdata.F90 : Check argument and namelist syntax:          234
+STOP  Execution terminated because of runtime error
+ Error reading terrainparam namelist in regcm.in
+ Parameter initialization not completed
+ Usage : 
+           ./bin/sstCLM45 regcm.in
+  
+ sst : Check argument and namelist syntax.:            1
+STOP  Execution terminated because of runtime error
+ Error reading terrainparam namelist in regcm.in
+ Parameter initialization not completed
+ Usage : 
+           ./bin/icbcCLM45 regcm.in
+  
+ Check argument and namelist syntax
+ icbc : Check argument and namelist syntax:            1

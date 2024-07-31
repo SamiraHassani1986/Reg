@@ -1,38 +1,38 @@
-! testing the lakemod: provided by Bi 
+!Antarctic domain
  &coreparam
- idynamic = 2,
+ idynamic = 1,
  /
-
  &dimparam
  iy     = 297,
  jx     = 297,
- kz     = 64,
+ kz     = 32,
+ dsmin  = 0.002,
+ dsmax  = 0.05,
  nsg    = 1,
  /
  &geoparam
  iproj = 'POLSTR',
- ds = 10.0,
+ ds = 20.00,
  ptop = 5.0,
  clat = -79.00,
  clon = -167.00,
- plat = 45.39,
- plon = 13.48,
- truelatl = 35.0,
- truelath = 60.0,
- i_band = 0,
+ truelatl = -43.452,
+ truelath = -43.452,
  /
  &terrainparam
- domname = 'Alena_case_study',
+ domname = 'FirstCase',
  lakedpth = .false.,
  fudge_lnd   = .false.,
  fudge_lnd_s = .false.,
  fudge_tex   = .false.,
  fudge_tex_s = .false.,
+ tersrc = 'GMTED',
  dirter = '/nesi/project/uc04166/Reg/RegCM-5.0.0/Run/input/',
  inpter = '/nesi/project/uc04166/Reg/RegCM-5.0.0/Glob/',
  /
  &debugparam
- debug_level = 0,
+ debug_level = 2,
+ dbgfrq = 2,
  /
  &boundaryparam
  nspgx  = 12,
@@ -44,11 +44,16 @@
  dattyp = 'ERA5',
  gdate1 = 2014010100,
  gdate2 = 2014010200,
+ calendar = 'gregorian',
  dirglob = '/nesi/project/uc04166/Reg/RegCM-5.0.0/Run/input/',
  inpglob = '/nesi/project/uc04166/Reg/RegCM-5.0.0/Glob/',
  /
+ &fnestparam
+#coarse_outdir = '/home/UOCNT/sha392/bla/output/', ! Coarse domain output dir if FNEST
+#coarse_domname = 'WRF-27km',        ! Coarse domain domname
+ /
  &restartparam
- ifrest  = .false. ,
+ ifrest  = .false.,
  mdate0  = 2014010100,
  mdate1  = 2014010100,
  mdate2  = 2014010200,
@@ -57,30 +62,31 @@
  dtrad   =    30.,
  dtabem  =    18.,
  dtsrf   =   600.,
- dt      =   30.,
+ dt      =    30.,
  /
  &outparam
- ifsave  = .true. ,
-   savfrq  =    0.,
+ ifsave  = .true.,
+   savfrq  =  7200.,
  ifatm  = .true. ,
    atmfrq  =     6.,
- ifrad   = .true. ,
+ ifrad   = .false. ,
    radfrq  =     6.,
  ifsrf   = .true. ,
- ifsub   = .true. ,
- iflak   = .false.,
-   srffrq  =     3.,
+ ifsub   = .false. ,
+ ifsts   = .false. ,
+   subfrq  =     6.,
+   srffrq  =     6.,
  ifchem  = .false.,
    chemfrq =     6.,
- dirout= '/nesi/project/uc04166/Reg/RegCM-5.0.0/Run/output/',
+ dirout = '/nesi/project/uc04166/Reg/RegCM-5.0.0/Run/output/',
  /
-&physicsparam
+ &physicsparam
  iboudy  =          5,
  ibltyp  =          1,
  idiffu  =          1,
  icup_lnd =         4,
- icup_ocn =         4,
- ipptls  =          1,
+ icup_ocn =         4
+ ipptls  =          2,
  iocnflx =          2,
  icumcloud =        2,  ! Use different models for cumulus clouds
  iocncpl =          0,  ! Activates RegCM-ROMS coupled model
@@ -93,7 +99,7 @@
  iseaice =          1,
  iconvlwp =         0,
  /
-&microparam
+ &microparam
  stats = .false.,           ! Produce debug variables in output files
  budget_compute = .false.,  ! Verify enthalpy and moisture conservation
  nssopt = 1,                ! Supersaturation Computation
@@ -118,11 +124,41 @@
  rcovpmin = 0.1,            ! Minimum precipitation coverage
  rpecons = 5.547e-5,        ! Evaporation constant Kessler
  /
- &subexparam
- /
  &grellparam
  /
- &emanparam
+ &tiedtkeparam
+ iconv = 4,             ! Actual used scheme.
+ entrmax = 1.75e-3,     ! Max entrainment iconv=[1,2,3]
+ entrdd  = 3.0e-4,      ! Entrainment rate for cumulus downdrafts
+ entrpen_lnd = 1.75e-3, ! Entrainment rate for penetrative convection
+ entrpen_ocn = 1.75e-3, ! Entrainment rate for penetrative convection
+ entrscv = 3.0e-4,      ! Entrainment rate for shallow convection iconv=[1,2,3]
+ entrmid = 1.0e-4,      ! Entrainment rate for midlevel convection iconv=[1,2,3]
+ cprcon = 1.0e-4,       ! Coefficient for determining conversion iconv=[1,2,3]
+ detrpen_lnd = 0.75e-4, ! Detrainment rate for penetrative convection iconv=4
+ detrpen_ocn = 0.75e-4, ! Detrainment rate for penetrative convection iconv=4
+ rcuc_lnd = 0.05,       ! Convective cloud cover for rain evporation iconv=4
+ rcuc_ocn = 0.05,       ! Convective cloud cover for rain evporation iconv=4
+ rcpec_lnd = 5.55e-5,   ! Coefficient for rain evaporation below cloud iconv=4
+ rcpec_ocn = 5.55e-5,   ! Coefficient for rain evaporation below cloud iconv=4
+ rhebc_lnd = 0.8,       ! Critical rh below cloud for evaporation iconv=4
+ rhebc_ocn = 0.8,       ! Critical rh below cloud for evaporation iconv=4
+ rprc_lnd = 1.4e-3,     ! conversion coefficient from cloud water iconv=4
+ rprc_ocn = 1.4e-3,     ! conversion coefficient from cloud water iconv=4
+ revap_lnd = 1.0e-5,    ! Raindrop evap rate coef land
+ revap_ocn = 1.0e-5,    ! Raindrop evap rate coef ocean
+ entshalp = 2.0,        ! shallow entrainment factor for entrorg iconv=4
+ cmtcape = 3600.0,      ! CAPE adjustment timescale iconv=[1,2,3]
+ lmfpen    = .true.,    ! penetrative conv is switched on
+ lmfmid    = .true.,    ! midlevel conv is switched on
+ lmfdd     = .true.,    ! cumulus downdraft is switched on
+ lepcld    = .true.,    ! prognostic cloud scheme is on
+ lmfdudv   = .true.,    ! cumulus friction is switched on
+ lmfscv    = .true.,    ! shallow convection is switched on
+ lmfuvdis  = .true.,    ! use kinetic energy dissipation
+ lmftrac   = .true.,    ! chemical tracer transport is on
+ lmfsmooth = .false.,   ! smoot of mass fluxes for tracers
+ lmfwstar  = .false.,   ! Grant w* closure for shallow conv
  /
  &holtslagparam
  ricr_ocn = 0.25,  ! Critical Richardson Number over Ocean
@@ -141,12 +177,15 @@
                    !      2 => min(th10,tg)
  holtth10iter = 1, ! Iterations in th10 computation
  /
- &clm_inparm
+&clm_inparm
  fpftcon = 'pft-physiology.c130503.nc',
  fsnowoptics = 'snicar_optics_5bnd_c090915.nc',
  fsnowaging = 'snicar_drdt_bst_fit_60_c070416.nc',
  /
  &clm_soilhydrology_inparm
+ h2osfcflag = 1,
+ origflag = 0,
  /
  &clm_hydrology1_inparm
+ oldfflag = 0,
  /

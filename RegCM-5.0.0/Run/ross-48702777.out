@@ -1,0 +1,206 @@
+
+  This is Terrain part of RegCM package version 5
+   GIT Revision: 5.0.0 compiled at: data : Jul  8 2024  time: 15:32:42
+
+ : this run start at  : 2024-07-29 11:18:45+1200
+ : it is submitted by : sha392
+ : it is running on   : wbn179
+ : in directory       : /scale_wlg_persistent/filesets/project/uc04166/Reg/RegCM-5.0.0/Run
+                      
+ Creating a set of sigma levels... 
+ Convergence reached.
+ #  0.92740257089299472        1.0016084179687503               17
+ #   5.0000000000000003E-002   1.0000000000000000E-002  0.99999031131634053     
+ Using non hydrostatic parameters
+ base_state_pressure    =  101325.00
+ logp_lrate             =      47.70
+ 
+ Doing Horizontal Grid with following parameters
+ iy     =          297
+ jx     =          297
+ kz     =           64
+ ds     =    10.000000000000000     
+ clat   =   -79.000000000000000     
+ clon   =   -167.00000000000000     
+ iproj  = POLSTR
+ Grid setup done
+ Geo mapping done
+ Special case for longitude wrapping
+ Calculated large extrema:
+          MINLAT =   -90.000000000000000     
+          MAXLAT =   -62.000000000000000     
+          MINLON =   -180.00000000000000     
+          MAXLON =    180.00000000000000     
+ Determined Grid coordinate range
+ No resampling used.
+ Static DEM data successfully read in
+ Interpolated DEM on model GRID
+ Static landcover BATS data successfully read in
+ Interpolated landcover on model GRID
+ Static texture data successfully read in
+ Interpolated texture on model GRID
+ Fudging data (if requested) succeeded
+ Skip moisture creation, no moisture file to read
+ Computed reference surface temperature for domain:    273.29439152746261     
+ Vertical Grid Description (mean over domain)
+ 
+ --------------------------------------------------
+ k        sigma       p(mb)           z(m)     T(K)
+ --------------------------------------------------
+ 65       1.000      900.11          0.00     267.1
+ 64       0.990      891.60         75.81     266.6
+ 63       0.980      883.30        150.31     266.2
+ 62       0.971      875.19        223.70     265.7
+ 61       0.961      867.25        296.10     265.3
+ 60       0.952      859.46        367.64     264.9
+ 59       0.943      851.81        438.43     264.4
+ 58       0.934      844.28        508.60     264.0
+ 57       0.926      836.86        578.26     263.6
+ 56       0.917      829.54        647.51     263.2
+ 55       0.908      822.30        716.47     262.8
+ 54       0.900      815.13        785.25     262.4
+ 53       0.892      808.02        853.96     261.9
+ 52       0.883      800.96        922.72     261.5
+ 51       0.875      793.93        991.62     261.1
+ 50       0.867      786.92       1060.80     260.7
+ 49       0.859      779.93       1130.35     260.3
+ 48       0.850      772.94       1200.41     259.8
+ 47       0.842      765.94       1271.09     259.4
+ 46       0.834      758.91       1342.52     259.0
+ 45       0.826      751.86       1414.83     258.5
+ 44       0.817      744.76       1488.16     258.1
+ 43       0.809      737.60       1562.65     257.6
+ 42       0.800      730.38       1638.45     257.1
+ 41       0.792      723.07       1715.72     256.6
+ 40       0.783      715.68       1794.63     256.2
+ 39       0.774      708.17       1875.36     255.7
+ 38       0.765      700.55       1958.10     255.1
+ 37       0.756      692.79       2043.06     254.6
+ 36       0.747      684.88       2130.47     254.1
+ 35       0.737      676.81       2220.56     253.5
+ 34       0.728      668.55       2313.59     252.9
+ 33       0.718      660.09       2409.85     252.3
+ 32       0.707      651.41       2509.65     251.7
+ 31       0.697      642.50       2613.33     251.0
+ 30       0.686      633.33       2721.27     250.3
+ 29       0.675      623.87       2833.87     249.6
+ 28       0.664      614.10       2951.60     248.9
+ 27       0.652      604.00       3074.95     248.1
+ 26       0.639      593.54       3204.50     247.2
+ 25       0.627      582.69       3340.87     246.4
+ 24       0.613      571.41       3484.78     245.4
+ 23       0.600      559.68       3637.02     244.5
+ 22       0.585      547.44       3798.51     243.4
+ 21       0.570      534.66       3970.27     242.3
+ 20       0.554      521.30       4153.48     241.1
+ 19       0.538      507.30       4349.51     239.8
+ 18       0.521      492.62       4559.91     238.4
+ 17       0.503      477.18       4786.53     236.9
+ 16       0.483      460.94       5031.51     235.2
+ 15       0.463      443.81       5297.39     233.4
+ 14       0.442      425.72       5587.20     231.5
+ 13       0.419      406.59       5904.63     229.3
+ 12       0.396      386.32       6254.13     227.1
+ 11       0.370      364.82       6641.27     224.8
+ 10       0.343      341.96       7073.02     222.5
+  9       0.315      317.63       7558.37     220.2
+  8       0.284      291.69       8109.11     217.8
+  7       0.252      263.99       8741.19     216.7
+  6       0.217      234.36       9477.03     216.7
+  5       0.180      202.61      10349.56     216.7
+  4       0.139      168.54      11410.42     216.7
+  3       0.096      131.93      12748.19     216.7
+  2       0.050       92.51      14537.80     216.7
+  1       0.000       50.00      17225.58     216.7
+ Grid data written to output file
+ Successfully completed terrain fields generation
+
+  This is mksurfdata part of RegCM package version 5
+   GIT Revision: 5.0.0 compiled at: data : Jul  8 2024  time: 15:33:41
+
+ : this run start at  : 2024-07-29 11:18:55+1200
+ : it is submitted by : sha392
+ : it is running on   : wbn179
+ : in directory       : /scale_wlg_persistent/filesets/project/uc04166/Reg/RegCM-5.0.0/Run
+                      
+ Created topographic informations...
+ Computing weights............................. Done.
+ Computing weights............................. Done.
+ Computing weights............................. Done.
+ Computing weights............................. Done.
+ Created special categories informations...
+ Created pft informations...
+ Computing weights............................. Done.
+ Created lai/sai informations...
+ Computing weights............................. Done.
+ Computing weights............................. Done.
+ Computing weights............................. Done.
+ Created soil texture/color informations...
+ Computing weights............................. Done.
+ Computing weights............................. Done.
+ Computing weights............................. Done.
+ Created human population informations...
+ Computing weights............................. Done.
+ Computing weights............................. Done.
+ Created VOC/horganic informations...
+ Computing weights............................. Done.
+ Computing weights............................. Done.
+ Created LAKE/URBAN informations...
+ Successfully completed CLM preprocessing.
+
+  This is sst part of the RegCM version 5
+   GIT Revision: 5.0.0 compiled at: data : Jul  8 2024  time: 15:33:03
+
+ : this run start at    : 2024-07-29 11:21:17+1200
+ : it is submitted by   : sha392
+ : it is running on     : wbn179
+ : in directory         : /scale_wlg_persistent/filesets/project/uc04166/Reg/RegCM-5.0.0/Run
+                       
+ Opened /nesi/project/uc04166/Reg/RegCM-5.0.0/Glob//ERA5/SST/sst_2014_01.nc
+ Computing weights............................. Done.
+ Add offset   =    288.82880263152248     
+ Scale factor =    5.9786195504554958E-004
+ Fill Value   =  -32767
+ GLOBIDATE1 :  2014-01-01 00:00:00 UTC        
+ GLOBIDATE2 :  2014-01-02 00:00:00 UTC        
+ NSTEPS =            5
+ Opened /nesi/project/uc04166/Reg/RegCM-5.0.0/Glob//ERA5/SST/sst_2014_01.nc
+ Add offset   =    288.82880263152248     
+ Scale factor =    5.9786195504554958E-004
+ Fill Value   =  -32767
+ WRITEN OUT SST DATA :  2014-01-01 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2014-01-01 06:00:00 UTC        
+ WRITEN OUT SST DATA :  2014-01-01 12:00:00 UTC        
+ WRITEN OUT SST DATA :  2014-01-01 18:00:00 UTC        
+ WRITEN OUT SST DATA :  2014-01-02 00:00:00 UTC        
+ Input ready at : Mon Jul 29 11:21:17 2024
+ Successfully generated SST
+
+  This is icbc part of the RegCM version 5
+   GIT Revision: 5.0.0 compiled at: data : Jul  8 2024  time: 15:33:03
+
+ : this run start at    : 2024-07-29 11:21:17+1200
+ : it is submitted by   : sha392
+ : it is running on     : wbn179
+ : in directory         : /scale_wlg_persistent/filesets/project/uc04166/Reg/RegCM-5.0.0/Run
+                       
+ Using non hydrostatic parameters
+ base_state_pressure    =  101325.00
+ logp_lrate             =      47.70
+ GLOBIDATE1 :  2014-01-01 00:00:00 UTC        
+ GLOBIDATE2 :  2014-01-02 00:00:00 UTC        
+ NSTEPS     :            5
+ Computing weights............................. Done.
+ Computing weights............................. Done.
+      131072 /nesi/project/uc04166/Reg/RegCM-5.0.0/Glob//ERA5/2014/tatm_2014_01.nc  -2.0730511751025915E-003   251.11007690429688     
+      196608 /nesi/project/uc04166/Reg/RegCM-5.0.0/Glob//ERA5/2014/geop_2014_01.nc  -7.6253013610839844        244559.37500000000     
+      262144 /nesi/project/uc04166/Reg/RegCM-5.0.0/Glob//ERA5/2014/qhum_2014_01.nc  -3.6848203421868675E-007   1.2027956545352936E-002
+      327680 /nesi/project/uc04166/Reg/RegCM-5.0.0/Glob//ERA5/2014/uwnd_2014_01.nc  -5.2301157265901566E-003   32.717788696289062     
+      393216 /nesi/project/uc04166/Reg/RegCM-5.0.0/Glob//ERA5/2014/vwnd_2014_01.nc  -5.4752845317125320E-003  -7.0428848266601562     
+ READ IN fields at DATE: 2014-01-01 00:00:00 UTC        
+ READ IN fields at DATE: 2014-01-01 06:00:00 UTC        
+ READ IN fields at DATE: 2014-01-01 12:00:00 UTC        
+ READ IN fields at DATE: 2014-01-01 18:00:00 UTC        
+ READ IN fields at DATE: 2014-01-02 00:00:00 UTC        
+ Input ready at : Mon Jul 29 11:22:14 2024
+ Successfully completed ICBC
